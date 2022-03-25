@@ -1,0 +1,71 @@
+<%- include ('../partials/header') -%>
+<nav class="navbar navbar-dark navbar-expand-sm bg-success">
+  <a class="navbar-brand" href="/admin/categories">
+    <img src="../assets/brand.png" width="90">
+  </a>
+  <button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#nav-target">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav-target">
+      <ul class="navbar-nav my-2 ml-auto" id="nav-target">
+        <li class="nav-item mr-5">
+          <a href="/" class="navbar-brand">  Voltar ao Blog </a>
+        </li>   
+      </ul>
+    </div>
+</nav>
+<div class="container login-container d-flex justify-content-center">
+        <div class="col-md-5 login-form-2 d-flex flex-column">
+            <h3>Painel Administrativo</h3>
+            <h3>Login</h3>
+            <form method="post" action="/admin">
+                <div class="form-group">
+                    <input type="text" name="user_email" class="form-control" placeholder="Your Email *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="user_password" class="form-control" placeholder="Your Password *" value="" />
+                </div>
+                <div class="form-group d-flex flex-column align-items-center">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+            </form>
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+                Cadastrar Administrador
+              </button>
+        </div>
+        <div class="modal" tabindex="-1" id="exampleModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Página de Cadastro</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/admin/register">
+                        <div class="form-group">
+                            <input type="text" name="user_name" class="form-control" placeholder="Seu Nome *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="user_email" class="form-control" placeholder="Seu Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="user_password"  class="form-control" placeholder="Sua Senha *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <label>Chave de autorização para cadastro:</label>
+                            <input type="text" name="user_autorization" class="form-control" placeholder="Autorização *" value="Administrador do Blog" />
+                        </div>
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary " data-dismiss="modal">Fechar Página</button>
+                  <button type="submit" class="btn btn-primary">Cadastrar Administrador</button>
+                </div>
+                    </form>
+              </div>
+            </div>
+          </div>
+</div>
+<%- include ('../partials/footer') -%>

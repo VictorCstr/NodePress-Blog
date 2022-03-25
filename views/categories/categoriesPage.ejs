@@ -1,0 +1,31 @@
+<%- include ('../partials/header') -%>
+<%- include ('../partials/navbar') -%>
+    <div class="container">
+        <h2 class="my-5">Categorias</h2>
+        <a href="/admin/categories/register" class="btn btn-success mb-5">Cadastrar categoria</a>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">Slug</th>
+                <th scope="col">Opções</th>
+              </tr>
+            </thead>
+            <% category.forEach( (category) => { %>
+                <tbody>
+                <th scope="col"> <%= category.id %></th>
+                <th scope="col"> <%= category.title%> </th>
+                <th scope="col"> <%= category.slug %> </th>
+                <th scope="col">
+                    <a href="/admin/categories/edit/<%= category.id %>" class="btn btn-info mr-2">Alterar</a>
+                  <form action="/admin/categories/delete" method="post" style="display: inline;" onsubmit="confirmDelete(event,this)">
+                    <input type="hidden" name="id" value="<%=category.id%>">
+                    <button type="submit" class="btn btn-danger">Deletar</button>
+                  </form>
+                </th>
+                </tbody>
+            <% }) %>
+          </table>
+    </div> 
+<%- include ('../partials/footer') -%>

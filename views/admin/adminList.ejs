@@ -1,0 +1,22 @@
+<%- include ('../partials/header') -%>
+<%- include ('../partials/navbar') -%>
+    <div class="container">
+        <h2 class="my-5">Lista de Administradores</h2>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <% users.forEach( (user) => { %>
+                <tbody>
+                <th scope="col"> <%= user.id %></th>
+                <th scope="col"> <%= user.user_name%> </th>
+                <th scope="col"> <%= user.user_email%> </th>      
+                </tbody>
+            <% }) %>
+          </table>
+    </div> 
+<%- include ('../partials/footer') -%>

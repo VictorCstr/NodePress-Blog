@@ -1,0 +1,37 @@
+<%- include ('../partials/header') -%>
+<%- include ('../partials/navbar') -%>
+    <div class="container">
+        <h2 class="my-5">Artigos</h2>
+        <a href="/admin/articles/register" class="btn btn-primary mb-5">Criar Artigo</a>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">Slug</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Criado em:</th>
+                <th scope="col">Atualizado em:</th>
+                <th scope="col">Opções</th>
+              </tr>
+            </thead>
+            <% article.forEach( article => { %>
+                <tbody>
+                <th scope="col"> <%= article.id %></th>
+                <th scope="col"> <%= article.title%> </th>
+                <th scope="col"> <%= article.slug %> </th>
+                <th scope="col"> <%= article.Category.title %> </th>
+                <th scope="col"> <%= article.createdAt %> </th>
+                <th scope="col"> <%= article.updatedAt %> </th>          
+                <th scope="col">
+                    <a href="/admin/articles/edit/<%=article.id%>" class="btn btn-info mr-2">Alterar</a>
+                  <form action="/admin/articles/delete" method="post" style="display: inline;" onsubmit="confirmDelete(event,this)">
+                    <input type="hidden" name="id" value="<%= article.id %>">
+                    <button type="submit" class="btn btn-danger">Deletar</button>
+                  </form>
+                </th>
+                </tbody>
+            <% }) %>
+          </table>
+    </div> 
+<%- include ('../partials/footer') -%>

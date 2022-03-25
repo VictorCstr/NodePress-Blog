@@ -1,0 +1,38 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-success">
+    <a class="navbar-brand" href="/">
+        <img src="../assets/brand.png" width="90">
+    </a> 
+    <button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#nav-target">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav-target">
+        <ul class="navbar-nav mr-auto" id="nav-target">
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"> Categorias de Artigos  </a>
+                <div  class="dropdown-menu">
+                    <% category.forEach( category => { %>  
+                            <a href="/categories/<%=category.slug%>" class="dropdown-item">  <%=category.title%>  </a>  
+                    <% }) %> 
+                </div>
+            </li>  
+        </ul> 
+        <ul class="navbar-nav my-auto">  
+          
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <form method="post" action="/article/" class="form-inline">   
+                    <li class="nav-item">
+                        <input type="text" class=" form-control" name="article" placeholder="Procure pelo assunto" id="busca"> 
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-dark">Buscar</button>
+                    </li>
+                </form>  
+            </li>
+            <li>
+                <a href="/admin/categories" class="navbar-brand ml-5"> Painel Administrativo  </a>
+            </li>
+        </ul>
+      </div>
+</nav>
