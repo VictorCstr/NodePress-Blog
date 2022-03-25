@@ -15,11 +15,11 @@ const adminController = {
         let {user_name, user_email, user_password, user_autorization} = req.body
         let Autorization = "Administrador do Blog"
         if (user_autorization == Autorization){
+        const passHash = await bcrypt.hash(user_password, 10)
            await UserAdm.findOne({
                 where: {user_email}
             }).then( user =>{
                 if(user == undefined){
-                    const passHash =  bcrypt.hash(user_password, 10)
                      UserAdm.create({
                         user_name,
                         user_email,
