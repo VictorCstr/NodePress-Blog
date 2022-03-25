@@ -2,9 +2,8 @@
 <p align="center">
  <a href="#mag_right-para-acessar">Como Acessar</a> •
  <a href="#computer-sobre-o-projeto ">Sobre o Projeto</a> • 
-  <a href="#point_down-como-ficou">Exemplo</a> • 
- <a href="#mag_right-para-rodar-o-projeto">Como rodar</a> • 
- <a href="#tv-tela-do-formulário">Tela do formulário</a> • 
+ <a href="#dart-ferramentas">Ferramentas usadas</a> • 
+ <a href="#point_down-como-ficou">Exemplo de como ficou</a> 
 </p>
 
 <p align="center"> 
@@ -21,7 +20,8 @@
 ## :computer: Sobre o projeto 
 - Este trabalho foi feito com o intuito de treinar as habilidades com o Node e seu ecossistema.
 - Se trata de um blog de artigos no mundo da programação para visualização do usuário e tela administrativa para os criadores.
-- O usuário consegue interagir no blog visualizando todos os artigos na pagina principal, consegue entrar, pode fazer o filtro por categoria, se preferir pode procurar pelo nome de artigo através do input na navbar
+- O usuário consegue interagir no blog visualizando todos os artigos na pagina principal, consegue entrar em cada artigo e visualizar os textos, pode fazer o filtro por categoria, se preferir pode procurar pelo nome de artigo através do input na navbar e também consegue avançar a página através de uma paginação.
+- O administrador através de um login com um cookie que expira em 30 minutos
 
 ## :dart: Ferramentas
 Para construir este projeto foram usadas as seguintes ferramentas:
@@ -38,30 +38,3 @@ Para construir este projeto foram usadas as seguintes ferramentas:
 
 ## :point_down: Como ficou
 <img src="https://github.com/VictorCstr/desafioCRUDjs-gama/blob/main/public/images/gif-exemplo.gif" width="100%"/>
-
-## :mag_right: Para rodar o projeto:
-```bash
-# Pré requisitos
-- Git e Node instalados na máquina
-
-# Faça o clone do repositório
-$ git clone <https://github.com/VictorCstr/desafioCRUDjs-gama.git>
-
-# Acesse a pasta do projeto no terminal
-$ cd agencia-cronos-adm
-
-# Faça a instalação  das dependências
-$ npm install
-
-# Execute a aplicação
-$ npm start
-
-# Caso queira localizar os serviços salvos, dentro do console do navegador:
-$ console.log(listaServicos)
-```
-
-## :tv: Tela do formulário
-
-<p align="center"> 
-  <img src="https://github.com/VictorCstr/desafioCRUDjs-gama/blob/main/public/images/formaberto.png" width="100%">
-</p>
