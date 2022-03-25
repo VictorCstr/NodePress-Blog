@@ -2,9 +2,9 @@ const Sequelize = require('sequelize')
 
 let db = {}
     try { 
-        db = new Sequelize('projeto_paineladm', 'root', 'mysql',{
+        db = new Sequelize('heroku_c9bd3125896c207', 'b9cd3df715efe2', '36db69b8',{
         dialect: "mysql",
-        host:"localhost",
+        host:"us-cdbr-east-05.cleardb.net",
         port:3306,
         timezone: "-03:00"
 })} catch(error){
