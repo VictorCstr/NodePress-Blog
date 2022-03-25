@@ -8,6 +8,7 @@ const session = require('express-session')
 db.hasConection()
 app.set('view engine', 'ejs')
 
+app.set('trust proxy', 1)
 app.use(session({
     secret: "keyblognode", cookie:{ maxAge: 1800000},
     resave: true,
