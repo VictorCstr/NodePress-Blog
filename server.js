@@ -10,7 +10,9 @@ app.set('view engine', 'ejs')
 
 app.set('trust proxy', 1)
 app.use(session({
-    secret: "keyblognode", cookie:{ maxAge: 1800000},
+    secret: "keyblognode", cookie:{ 
+        secure: true,
+        maxAge: 1800000},
     resave: true,
     saveUninitialized: true
 }))
