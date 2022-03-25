@@ -16,7 +16,7 @@ const adminController = {
         let Autorization = "Administrador do Blog"
         if (user_autorization == Autorization){
            await UserAdm.findOne({
-                where: user_email
+                where: {user_email}
             }).then( user =>{
                 if(user == undefined){
                     const passHash =  bcrypt.hash(user_password, 10)
