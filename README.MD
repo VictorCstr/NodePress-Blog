@@ -37,4 +37,4 @@ Para construir este projeto foram usadas as seguintes ferramentas:
    - TinyMCE para criar uma textarea mais robusta com diversas ferramentas para uma postagem com imagens, links, tratamento de texto e etc.
 
 ## :point_down: Como ficou
-<img src="https://github.com/VictorCstr/desafioCRUDjs-gama/blob/main/public/images/gif-exemplo.gif" width="100%"/>
+<img src="https://github.com/VictorCstr/NodePress-Blog/blob/main/NodePress-Blog-Google-Chrome-2022-03-25-18-54-00.gif" width="100%"/>
