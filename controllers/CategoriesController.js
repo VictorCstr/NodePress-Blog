@@ -7,7 +7,7 @@ const CategoriesController = {
              {order:[
             ['id', 'ASC']
         ]}).then(category => {
-            res.render('categories/CategoriesPage' , {category})
+            res.render('categories/categoriesPage' , {category})
         }) 
     },
     returnRegisterPage: (req,res) => {
